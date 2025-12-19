@@ -4,25 +4,27 @@ def analyze_logs():
     base_dir = os.path.dirname(os.path.abspath(__file__))
     log_file = os.path.join(base_dir, "logs", "app.log")
 
-    print("DEBUG: Trying to read log file from:")
-    print(log_file)
+    log_counts = {
+        "INFO": 0,
+        "WARNING": 0,
+        "ERROR": 0
+    }
 
     if not os.path.exists(log_file):
-        print("❌ ERROR: Log file not found!")
+        print("❌ Log file not found!")
         return
-
-    total_lines = 0
-    error_count = 0
 
     with open(log_file, "r") as file:
         for line in file:
-            total_lines += 1
-            if "ERROR" in line:
-                error_count += 1
+            for level in log_counts:
+                if level in line:
+                    log_counts[level] += 1
 
-    print("\n===== LOG ANALYSIS v1.0 =====")
-    print(f"Total log entries: {total_lines}")
-    print(f"Total ERROR logs: {error_count}")
+    print("\n===== LOG ANALYSIS v2.0 =====")
+    print(f"INFO logs    : {log_counts['INFO']}")
+    print(f"WARNING logs : {log_counts['WARNING']}")
+    print(f"ERROR logs   : {log_counts['ERROR']}")
+    print("============================")
 
 
 if __name__ == "__main__":
