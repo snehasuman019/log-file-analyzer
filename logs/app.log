@@ -1,0 +1,12 @@
+2025-01-10 09:55:12 INFO Server started successfully
+2025-01-10 09:56:01 INFO User admin logged in
+2025-01-10 09:57:45 ERROR Failed to connect to database
+2025-01-10 09:58:10 WARNING High CPU usage detected
+2025-01-10 09:59:33 ERROR Database authentication failed
+2025-01-10 10:00:05 INFO Scheduled backup started
+2025-01-10 10:01:42 ERROR Backup process interrupted
+2025-01-10 10:02:18 INFO Retrying backup
+2025-01-10 10:03:55 ERROR Disk write failure
+2025-01-10 10:04:30 INFO Cleanup process started
+2025-01-10 10:05:12 ERROR Network timeout while syncing data
+2025-01-10 10:06:00 INFO Server health check completed
