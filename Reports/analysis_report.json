@@ -1,0 +1,15 @@
+{
+    "total_logs": 5,
+    "log_levels": {
+        "ERROR": 2,
+        "INFO": 2,
+        "WARNING": 1
+    },
+    "top_errors": {
+        "Database connection failed": 2
+    },
+    "logs_per_hour": {
+        "2025-12-18 10:00": 3,
+        "2025-12-18 11:00": 2
+    }
+}
